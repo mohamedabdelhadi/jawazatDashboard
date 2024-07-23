@@ -2,6 +2,8 @@ $(document).ready(function() {
 
             
     var baseUrl = "http://192.168.200.74:8000";
+    var apikey = "@J2w1_z!@T?zz";
+
     //enable and disable services
 
   
@@ -388,7 +390,10 @@ $(document).ready(function() {
          $.ajax({
             url: `${baseUrl}/update`,
             method: 'PUT',
-            contentType: 'application/json', 
+            headers: {
+                'Content-Type': 'application/json', // Standard header for JSON content
+                'apikey': `${apikey}`, // Replace with your actual API key
+                  },
             data: dataJson, 
             success: function(response) {
 
@@ -494,7 +499,10 @@ $(document).ready(function() {
         $.ajax({
             url: `${baseUrl}/add`, // Replace with your API endpoint URL
             method: 'POST',
-            contentType: 'application/json', // Specify the content type as JSON
+            headers: {
+                'Content-Type': 'application/json', // Standard header for JSON content
+                'apikey': `${apikey}`, // Replace with your actual API key
+                  },
             data: askMeDataJson, // Send the JSON string in the request body
             success: function(response) {
                
@@ -552,6 +560,10 @@ $(document).ready(function() {
             $.ajax({
                 url: `${baseUrl}/delete?id=${id}&type=${type}`, // Replace with your Node.js API URL
                 method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json', // Standard header for JSON content
+                    'apikey': `${apikey}`, // Replace with your actual API key
+                      },
                 
                 // data: dataJson,
                 success: function(response) {
@@ -678,7 +690,10 @@ $(document).ready(function() {
         $.ajax({
             url: `${baseUrl}/update`,
             method: 'PUT',
-            contentType: 'application/json', 
+            headers: {
+                'Content-Type': 'application/json', // Standard header for JSON content
+                'apikey': `${apikey}`, // Replace with your actual API key
+                  },
             data: dataJson, 
             success: function(response) {
                 console.log(response)
