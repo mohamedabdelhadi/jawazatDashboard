@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
             
-    var baseUrl = "https://conversation.qltyss.com";
+    var baseUrl = "http://192.168.200.74:8000";
     //enable and disable services
 
   

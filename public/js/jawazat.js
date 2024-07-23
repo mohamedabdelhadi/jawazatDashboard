@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-    var baseUrl = "https://conversation.qltyss.com";
+    var baseUrl = "http://192.168.200.74:8000";
+    var apikey = "@J2w1_z!@T?zz";
 
     // $("#userDropdown").on('click', function(){
     //     $("#logoutModale").model("show")
@@ -57,7 +58,11 @@ $(document).ready(function () {
                 $.ajax({
                     url: `${baseUrl}/update`, // Replace with your Node.js API URL
                     method: 'PUT',
-                    contentType: 'application/json', 
+                    headers: {
+                        'Content-Type': 'application/json', // Standard header for JSON content
+                        'apikey': `${apikey}`, // Replace with your actual API key
+                          },
+                
                     data: dataJson,
                     success: function(response) {
                         alertmsg('Success','! Successfully updated the Service.');  
