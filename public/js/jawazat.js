@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var baseUrl = "http://192.168.200.74:8000";
+    var baseUrl = "http://192.168.200.74";
     var apikey = "@J2w1_z!@T?zz";
 
     // $("#userDropdown").on('click', function(){
